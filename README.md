@@ -20,3 +20,5 @@ Newsfeed - Home page of the user, contains all posts made by user's followed
 Settings - Basic modifications user can make to his/her profile
 
 Profile - Profile of a user, contains all posts and comments made by user.
+
+:D
