@@ -1,4 +1,6 @@
 Reedit::Application.routes.draw do
+  get "user/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
