@@ -7,9 +7,12 @@ gem 'rails', '3.2.16'
 
 gem 'sqlite3'
 
-group :test do
+group :development, :test do
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'capybara', '2.2.1'
+  gem 'rspec', '2.14.1'
+  gem 'rspec-rails', '2.14.2'
 end
 
 # Gems used only for assets and not required

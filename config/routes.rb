@@ -1,5 +1,5 @@
 Reedit::Application.routes.draw do
-  get "user/new"
+  root :to => 'login#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
