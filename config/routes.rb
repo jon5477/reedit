@@ -1,8 +1,7 @@
 Reedit::Application.routes.draw do
-  get "main/index"
+  resources :user
+  match '/signup', :to => 'user#new'
   root :to => 'main#index'
-  #get "welcome/index"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
