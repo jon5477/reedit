@@ -1,5 +1,7 @@
 Reedit::Application.routes.draw do
-  root :to => 'login#index'
+  get "main/index"
+  root :to => 'main#index'
+  #get "welcome/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
