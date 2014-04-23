@@ -1,4 +1,4 @@
-reedit
+Reedit
 ======
 
 Project Members:
