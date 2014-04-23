@@ -1,6 +1,8 @@
 Reedit::Application.routes.draw do
   resources :user
+  match '/user/new', :to => 'user#create', :via => [:post]
   match '/signup', :to => 'user#new'
+  match '/' => 'login#index', :via => [:post]
   root :to => 'main#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
