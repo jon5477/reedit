@@ -1,10 +1,28 @@
-<table border="1">
+<table class="main-table-border">
 <tr>
-<td><h1>Welcome to Reedit.</h1></td>
-<td>Sign in content here</td>
+<td rowspan="2" valign="top" class="main-td-border">
+	<h1>Welcome to Reedit</h1>
+	<p>Logo goes here</p>
+</td>
+<td class="main-td-border">
+<table border="0">
+	<%= form_for(:user) do |f| %>
+		<tr>
+			<td><%= f.label :name %></td>
+			<td><%= f.text_field :name %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :password %></td>
+			<td><%= f.password_field :password %></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="middle"><%= f.submit "Sign In", class: "register-btn" %></td>
+		</tr>
+	<% end %>
+</table>
+</td>
 </tr>
 <tr>
-<td>Maybe a picture here?</td>
-<td>Register form here</td>
+<td align="center"><a href="signup/">Sign Up for Reedit</a></td>
 </tr>
 </table>
