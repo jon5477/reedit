@@ -1,2 +1,29 @@
+<% provide(:title, "(" << @user.name << ") on Reedit") %>
+<table border="1">
+	<tr>
+		<td colspan="4" align="center">
+			User's profile picture goes here
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center">
+			<%= @user.name %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Posts Count
+		</td>
+		<td>
+			Following
+		</td>
+		<td>
+			Followers
+		</td>
+		<td>
+			Follow Button Here
+		</td>
+	
+</table>
 <p>Under this view we want to display the user profile along with the
 user's profile customizations</p>
