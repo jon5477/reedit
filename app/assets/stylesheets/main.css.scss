@@ -2,16 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {box-sizing: border-box;}
+
 body {
-	background: #00CCFF;
+	background:/*#00CCFF*/ url(/assets/bkgimg.jpg) no-repeat;
+	backgroud-position: center;
+	background-attachment:fixed;
+	background-size: 100% 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .main-table-border {
-	border: 5px solid #8A6C3C;
+	border: 5px solid #FFFFFF;
 	border-collapse: collapse;
 }
 
 .main-td-border {
-	border: 5px solid #8A6C3C;
+	border: 5px solid #FFFFFF;
 	border-collapse: collapse;
+}
+
+#header{
+background-color:rgba(0,204,255,.4); 
+padding:5px;
+}
+#header h1 {
+	display: inline-block;
+	line-height: 40px;
+	font-size:40px;
+	margin: 5px;
+	font-family:'Pacifico', 'cursive';
+}
+
+img.headerlink{
+width: auto;
+height: 40px;
+padding: 0;
+margin: 5px 5px 0px 5px;
 }

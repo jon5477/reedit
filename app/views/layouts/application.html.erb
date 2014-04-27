@@ -3,10 +3,16 @@
 <head>
   <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+ <div id= "header">
+
+     <a href= "wat.html"> <img src= "/assets/ReeditLogo1.png" class ="headerlink" alt="Logo"></a><h1>Reedit</h1>
+  </div>
 
 <%= yield %>
 
