@@ -25,14 +25,10 @@
 		</td>
 	
 </table>
-<p>Under this view we want to display the user profile along with the
-user's profile customizations</p>
 <div class="span8">
 	<% if @user.posts.any? %>
-		<ol class="posts">
-			<%= render @posts %>
-		</ol>
-		<%= will_paginate @posts %>
+		<%= render @posts %>
+	<% else %>
+		<p><%= @user.name %> has not made any posts.</p>
 	<% end %>
 </div>
-<p>User's posts should also appear below</p>

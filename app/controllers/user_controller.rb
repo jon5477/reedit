@@ -20,7 +20,7 @@ class UserController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		# get posts made by user
+		@posts = @user.posts
 	end
 
 	private
