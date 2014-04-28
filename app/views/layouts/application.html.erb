@@ -19,14 +19,13 @@
 		</a>
 		</td>
 		<td>
-		<ul class="nav pull-right">
 		<% if signed_in %>
+		<ul class="nav pull-right">
 			<li><%= link_to "Profile", current_user %></li>
 			<li><%= link_to "Settings", '#' %></li>
-			<li class="divider"></li>
 			<li><%= link_to "Sign Out", '/signout', method: "delete" %></li>
-		<% end %>
 		</ul>
+		<% end %>
 		</td>
 		</tr>
 		</table>

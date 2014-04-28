@@ -25,3 +25,7 @@
 	border-color: #ebccd1;
 	font-family: Arial;
 }
+
+.pull-right {
+	list-style: none;
+}
