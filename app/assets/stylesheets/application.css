@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+
+.alert-success {
+	color: #3C763D;
+	background-color: #DFF0D8;
+	border-color: #D6E9C6;
+	font-family: Arial;
+}
+
+.alert-error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	font-family: Arial;
+}
