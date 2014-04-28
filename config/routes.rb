@@ -3,6 +3,7 @@ Reedit::Application.routes.draw do
 	match '/user/new', :to => 'user#create', :via => [:post]
 	match '/signup', :to => 'user#new'
 	match '/' => 'sessions#create', :via => [:post]
+	delete '/signout', to: 'sessions#destroy', as: 'signout'
 	#match '/' => 'login#index', :via => [:post]
 	root :to => 'main#index'
   # The priority is based upon order of creation:

@@ -9,17 +9,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id= "header">
+	<div id="header">
+		<table border="0">
+		<tr>
+		<td>
 		<a href="/">
-			<img src= "/assets/ReeditLogo1.png" class ="headerlink" alt="Logo">
+			<img src="/assets/ReeditLogo1.png" class="headerlink" alt="Logo">
 			<h1>Reedit</h1>
 		</a>
-	</div>
-	<div id="footer">
+		</td>
+		<td>
+		<ul class="nav pull-right">
+		<% if signed_in %>
+			<li><%= link_to "Profile", current_user %></li>
+			<li><%= link_to "Settings", '#' %></li>
+			<li class="divider"></li>
+			<li><%= link_to "Sign Out", '/signout', method: "delete" %></li>
+		<% end %>
+		</ul>
+		</td>
+		</tr>
+		</table>
 	</div>
 	<% flash.each do |key, value| %>
 		<div class="alert alert-<%= key%>"><%= value %></div>
 	<% end %>
 	<%= yield %>
+	<div id="footer">
+	</div>
 </body>
 </html>

@@ -20,4 +20,8 @@ module SessionsHelper
 		remember_token = User.digest(cookies[:remember_token])
 		@current_user ||= User.where(remember_token: remember_token).first
 	end
+
+	def signed_in
+		current_user != nil
+	end
 end
