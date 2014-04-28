@@ -25,3 +25,13 @@ input, textarea {
 	background: #CCCCCC;
 	border-radius: 5px;
 }
+
+#error_explanation {
+	color: #CD0000;
+	width:400px;
+	//height:300px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background:rgba(255,255,255,0.7);
+}

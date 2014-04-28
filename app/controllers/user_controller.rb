@@ -1,5 +1,3 @@
-require 'digest/sha1'
-
 class UserController < ApplicationController
 	def index
 		redirect_to root_path
@@ -10,6 +8,7 @@ class UserController < ApplicationController
 	end
 
 	def create
+		@user = User.new(user_params)
 		if @user.save
 			ridirect_to @user
 		else
