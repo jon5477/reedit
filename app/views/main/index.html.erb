@@ -1,31 +1,48 @@
 <% provide(:title, "Reedit") %>
 
+<div id="welcome" class="content">
+	<h1>Welcome to Reedit!</h1>
+</div>
+
+<div id="page">
+	<div id="whatis" class="content">
+		<h2>What is Reedit?</h2>
+		<p style="font-family: Raleway, sans-serif;color:black;margin:10px;"> 
+	Reedit is a brand new take on the social network. Combining the convenience of Twitter and the upvoting of Reddit, Reedit ensures that the best posts become the tallest reeds!
+	</p>
+	</div>
+
+	<div id="login" class="content">
+		<h2> Login </h2>
+		
+  		<%= form_for(:user) do |f| %>
+    		<tr>
+      		<td><%= f.label :name %></td>
+     		<td><%= f.text_field :name %></td>
+    		</tr>
+   		<tr>
+      		<td><%= f.label :password %></td>
+      		<td><%= f.password_field :password %></td>
+    		</tr>
+    		<tr>
+    		<td><%= f.submit "Sign In", class: "register-btn" %>
+		</td>
+   	 	</tr>
+  		<% end %>
+	
+		<div id = "text">
+			Not a member? Join today!
+		</div>
+
+		<tr>
+		<td><a href="signup/"> Sign Up for Reedit</a></td>
+		</tr>
+	</div>
 
 
-<table class="main-table-border">
-<tr>
-<td rowspan="2" valign="top" align="center" class="main-td-border">
-	<h1>Welcome to Reedit</h1>
-	<%= image_tag("ReeditLogo1.png") %>
-<td class="main-td-border">
-<table border="0">
-  <%= form_for(:user) do |f| %>
-    <tr>
-      <td><%= f.label :name %></td>
-      <td><%= f.text_field :name %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :password %></td>
-      <td><%= f.password_field :password %></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="middle"><%= f.submit "Sign In", class: "register-btn" %></td>
-    </tr>
-  <% end %>
-</table>
-</td>
-</tr>
-<tr>
-<td align="center"><a href="signup/">Sign Up for Reedit</a></td>
-</tr>
-</table>
+</div>
+
+
+
+
+

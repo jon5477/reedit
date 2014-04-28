@@ -1,10 +1,13 @@
 <% provide(:title, 'Reedit - Create an Account') %>
+
+<div id="welcome" class="content">
+
 <h1>Sign Up for Reedit</h1>
 <div class="row">
 	<div class="span6 offset3">
 		<table border="0">
 			<%= form_for(:user) do |f| %>
-				<%= render 'shared/error_messages' %>
+			<%= render 'shared/error_messages' %>
 				<tr>
 					<td><%= f.label :name, "Username" %></td>
 					<td><%= f.text_field :name %></td>
@@ -27,4 +30,6 @@
 			<% end %>
 		</table>
 	</div>
+</div>
+
 </div>

@@ -11,7 +11,7 @@ class UserController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			ridirect_to @user
-		else
+		else 
 			render 'new'
 		end
 	end
@@ -24,6 +24,6 @@ class UserController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:name, :email, :password, :password_confirmation)
+		params.require(:user).permit(:name, :email, :password)
 	end
 end
