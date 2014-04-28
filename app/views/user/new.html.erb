@@ -4,6 +4,7 @@
 	<div class="span6 offset3">
 		<table border="0">
 			<%= form_for(:user) do |f| %>
+				<%= render 'shared/error_messages' %>
 				<tr>
 					<td><%= f.label :name %></td>
 					<td><%= f.text_field :name %></td>

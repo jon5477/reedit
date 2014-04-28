@@ -10,23 +10,11 @@ class UserController < ApplicationController
 	end
 
 	def create
-		# check if the passwords are the same
-		if params[:password] == params[:password_confirmation]
-			@user = User.new(user_params)
-		#	@user.name = params[:name]
-		#	@user.password = Digest::SHA1.hexdigest params[:password]
-		#	@user.email = params[:email]
+		if @user.save
+			ridirect_to @user
 		else
-			# show errors to user TODO
-			redirect_to '/signup/'
+			render 'new'
 		end
-		#render 'show'
-		#if @user.save
-			# render
-		#else
-			# render 'new'
-		#end
-		@user = User.new(user_params)
 	end
 
 	def show
@@ -37,6 +25,6 @@ class UserController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:name, :email, :password)
+		params.require(:user).permit(:name, :email, :password, :password_confirmation)
 	end
 end
