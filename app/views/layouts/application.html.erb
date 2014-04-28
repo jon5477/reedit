@@ -9,20 +9,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
- <div id= "header">
-
-     <a href="/">
-       <img src= "/assets/ReeditLogo1.png" class ="headerlink" alt="Logo">
-       <h1>Reedit</h1>
-     </a>
-  </div>
-
-<div id="footer">
-	
-</div>
-
-<%= yield %>
-
+	<div id= "header">
+		<a href="/">
+			<img src= "/assets/ReeditLogo1.png" class ="headerlink" alt="Logo">
+			<h1>Reedit</h1>
+		</a>
+	</div>
+	<div id="footer">
+	</div>
+	<% flash.each do |key, value| %>
+		<div class="alert alert-<%= key%>"><%= value %></div>
+	<% end %>
+	<%= yield %>
 </body>
 </html>
