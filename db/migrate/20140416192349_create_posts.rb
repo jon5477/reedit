@@ -3,6 +3,8 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :content
       t.integer :rating
+      t.integer :user_id
+      t.timestamp :created_at
 
       t.timestamps
     end

@@ -2,16 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+a {
+	color: #000000;
+}
+
 body {
 	background: #00CCFF;
 }
 
+.logo {
+	align: center;
+}
+
 .main-table-border {
-	border: 5px solid #8A6C3C;
+	border: 5px solid #FFFFFF;
 	border-collapse: collapse;
 }
 
 .main-td-border {
-	border: 5px solid #8A6C3C;
+	border: 5px solid #FFFFFF;
 	border-collapse: collapse;
 }

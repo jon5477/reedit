@@ -13,6 +13,9 @@ describe "User" do
 		end
 	end
 	describe "GET /user/1" do
+		before do
+			user = User.create!(id: 1, name: "user", email: "example", password: "test")
+		end
 		it "should display a default user profile" do
 			visit '/user/1/'
 			expect(page).to have_content("user")
