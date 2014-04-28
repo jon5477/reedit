@@ -1,7 +1,7 @@
 class MainController < ApplicationController
-  def index
-    # if user is logged in, redirect to newsfeed
-    
-    # else just do nothing and show the home page
-  end
+	def index
+		if current_user != nil
+			redirect_to current_user
+		end
+	end
 end
