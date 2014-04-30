@@ -1,5 +1,8 @@
 <% provide(:title, "(" << @user.name << ") on Reedit") %>
 <table border="1">
+<tr>
+<td>
+<table border="1">
 	<tr>
 		<td colspan="4" align="center">
 			User's profile picture goes here
@@ -23,8 +26,18 @@
 		<td>
 			Follow Button Here
 		</td>
-	
+	</tr>
 </table>
+</td>
+<td>
+<%= form_for(:post, url: '/post') do |f| %>
+	<%= f.text_area :content, :rows => "2"%>
+	<%= f.submit "Post" %>
+<% end %>
+</td>
+</tr>
+<tr>
+<td colspan="2">
 <div class="span8">
 	<% if @user.posts.any? %>
 		<%= render @posts %>
@@ -32,3 +45,6 @@
 		<p><%= @user.name %> has not made any posts.</p>
 	<% end %>
 </div>
+</td>
+</tr>
+</table>
