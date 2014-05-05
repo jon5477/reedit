@@ -168,7 +168,7 @@ DEPENDENCIES
   cucumber-rails (= 1.4.0)
   database_cleaner!
   jquery-rails
-  pg
+  pg (= 0.17.1)
   rails (= 3.2.16)
   rails_12factor
   rspec (= 2.14.1)
