@@ -1,3 +1,6 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :rating
+	belongs_to :user
+	validates :user_id, presence: true
+
+	attr_accessible :content, :rating
 end

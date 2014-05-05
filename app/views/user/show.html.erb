@@ -48,7 +48,7 @@
 
 
 	<div class="span8">
-	<% if @user.posts.any? %>
+	<% if @posts.any? %>
 		<%= render @posts %>
 	<% else %>
 		<p>Boo! :( <%= @user.name %> has not made any posts.</p>

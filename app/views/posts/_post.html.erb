@@ -1,0 +1,13 @@
+<table border="1">
+<% @posts.each do |post| %>
+	<tr>
+	<td colspan="4"><%= post.content %></td>
+	</tr>
+	<tr>
+	<td align="center">^</td>
+	<td align="center"><%= post.rating %></td>
+	<td align="center">v</td>
+	<td>Posted <%= post.created_at %></td>
+	</tr>
+<% end %>
+</table>
