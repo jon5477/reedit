@@ -1,16 +1,19 @@
 <% provide(:title, "(" << @user.name << ") on Reedit") %>
-<table border="1">
+
+<div id="page">
+
+<table border="1"class= "profilebackground">
 <tr>
 <td>
-<table border="1">
+<table border= 1, class= "profilebackground">
 	<tr>
 		<td colspan="4" align="center">
-			User's profile picture goes here
+			<img src="/assets/profilepic.png" class="profilepic" alt="profilepic">
 		</td>
 	</tr>
 	<tr>
 		<td colspan="4" align="center">
-			<%= @user.name %>
+			<h3><%= @user.name %></h3>
 		</td>
 	</tr>
 	<tr>
@@ -29,22 +32,31 @@
 	</tr>
 </table>
 </td>
-<td>
-<%= form_for(:post, url: '/post') do |f| %>
-	<%= f.text_area :content, :rows => "2"%>
-	<%= f.submit "Post" %>
-<% end %>
-</td>
 </tr>
-<tr>
-<td colspan="2">
-<div class="span8">
+
+</table>
+
+
+<div id="postcolumn">
+
+	<div id="postbox", style=display:inline'>
+		<%= form_for(:post, url: '/post') do |f| %>
+		<%= f.text_area :content, :rows => "5", :cols => "60"%>
+		<%= f.submit  "Post", class: "register-btn" %>
+		<% end %>
+	</div>
+
+
+	<div class="span8">
 	<% if @user.posts.any? %>
 		<%= render @posts %>
 	<% else %>
-		<p><%= @user.name %> has not made any posts.</p>
+		<p>Boo! :( <%= @user.name %> has not made any posts.</p>
 	<% end %>
 </div>
-</td>
-</tr>
-</table>
+
+
+</div>
+
+
+</div>
