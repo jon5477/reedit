@@ -1,62 +1,54 @@
 <% provide(:title, "(" << @user.name << ") on Reedit") %>
-
 <div id="page">
-
-<table border="1"class= "profilebackground">
-<tr>
-<td>
-<table border= 1, class= "profilebackground">
-	<tr>
-		<td colspan="4" align="center">
-			<img src="/assets/profilepic.png" class="profilepic" alt="profilepic">
-		</td>
-	</tr>
-	<tr>
-		<td colspan="4" align="center">
-			<h3><%= @user.name %></h3>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			0 Posts
-		</td>
-		<td>
-			0 Following
-		</td>
-		<td>
-			0 Followers
-		</td>
-		<td>
-			Follow Button Here
-		</td>
-	</tr>
-</table>
-</td>
-</tr>
-
-</table>
-
-
-<div id="postcolumn">
-
-	<div id="postbox">
-		<%= form_for(:post, url: '/post') do |f| %>
-		<%= f.text_area :content, :rows => "6", :cols => "62"%>
-		<%= f.submit  "Post", class: "post-btn" %>
+	<div id="profile">
+		<table border="1" class="profilebackground">
+			<tr>
+			<td>
+			<table border="1" class="profilebackground">
+				<tr>
+					<td colspan="4" align="center">
+						<img src="/assets/profilepic.png" class="profilepic" alt="profilepic">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<h3><%= @user.name %></h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						0 Posts
+					</td>
+					<td>
+						0 Following
+					</td>
+					<td>
+						0 Followers
+					</td>
+					<td>
+						Follow Button Here
+					</td>
+				</tr>
+			</table>
+			</td>
+			<td>
+	</div>
+	<div id="postcolumn">
+		<div id="postbox", style=display:inline'>
+			<%= form_for(:post, url: '/post') do |f| %>
+			<%= f.text_area :content, :rows => "5", :cols => "60"%>
+			<%= f.submit  "Post", class: "register-btn" %>
+			<% end %>
+		</div>
+		<div id="posts">
+		<% if @posts.any? %>
+			<%= render @posts %>
+		<% else %>
+			<p>Boo! :( <%= @user.name %> has not made any posts.</p>
 		<% end %>
 	</div>
-
-
-	<div class="span8">
-	<% if @posts.any? %>
-		<%= render @posts %>
-	<% else %>
-		<p>Boo! :( <%= @user.name %> has not made any posts.</p>
-	<% end %>
 </div>
-
-
-</div>
-
-
+</td>
+</tr>
+</table>
 </div>
