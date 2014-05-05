@@ -41,11 +41,13 @@
 			<% end %>
 		</div>
 		<div id="posts">
-		<% if @posts.any? %>
-			<%= render @posts %>
-		<% else %>
-			<p>Boo! :( <%= @user.name %> has not made any posts.</p>
-		<% end %>
+		<table border="1">
+			<% if @posts.any? %>
+				<%= render @posts %>
+			<% else %>
+				<p><%= @user.name %> has not made any posts.</p>
+			<% end %>
+		</table>
 	</div>
 </div>
 </td>

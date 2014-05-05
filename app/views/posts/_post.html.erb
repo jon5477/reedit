@@ -1,5 +1,4 @@
 <table border="1">
-<% @posts.each do |post| %>
 	<tr>
 	<td colspan="4"><%= post.content %></td>
 	</tr>
@@ -9,5 +8,4 @@
 	<td align="center"><%= image_tag("thumb_down.png", :alt => "v") %></td>
 	<td>Posted <%= post.created_at %></td>
 	</tr>
-<% end %>
 </table>
