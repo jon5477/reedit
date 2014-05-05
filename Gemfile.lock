@@ -82,6 +82,7 @@ GEM
     multi_test (0.1.1)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    pg (0.17.1)
     polyglot (0.3.4)
     rack (1.4.5)
     rack-cache (1.2)
@@ -98,6 +99,11 @@ GEM
       activesupport (= 3.2.16)
       bundler (~> 1.0)
       railties (= 3.2.16)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (3.2.16)
       actionpack (= 3.2.16)
       activesupport (= 3.2.16)
@@ -162,7 +168,9 @@ DEPENDENCIES
   cucumber-rails (= 1.4.0)
   database_cleaner!
   jquery-rails
+  pg
   rails (= 3.2.16)
+  rails_12factor
   rspec (= 2.14.1)
   rspec-rails (= 2.14.2)
   sass-rails (~> 3.2.3)
