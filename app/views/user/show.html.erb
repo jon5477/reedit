@@ -39,10 +39,10 @@
 
 <div id="postcolumn">
 
-	<div id="postbox", style=display:inline'>
+	<div id="postbox">
 		<%= form_for(:post, url: '/post') do |f| %>
-		<%= f.text_area :content, :rows => "5", :cols => "60"%>
-		<%= f.submit  "Post", class: "register-btn" %>
+		<%= f.text_area :content, :rows => "6", :cols => "62"%>
+		<%= f.submit  "Post", class: "post-btn" %>
 		<% end %>
 	</div>
 
