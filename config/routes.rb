@@ -1,5 +1,11 @@
 Reedit::Application.routes.draw do
-	resources :user
+	resources :user do
+		member do
+			get :following, :followers
+		end
+	end
+	resources :sessions, only: [:new, :create, :destroy]
+	resources :relationships, only: [:create, :destroy]
 	match '/user/new', :to => 'user#create', :via => [:post]
 	match '/signup', :to => 'user#new'
 	match '/' => 'sessions#create', :via => [:post]

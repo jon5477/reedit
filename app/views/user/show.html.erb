@@ -26,7 +26,7 @@
 						<%= pluralize(@user.followers.count, "Follower") %>
 					</td>
 					<td>
-						Follow
+						<%= render 'follow_form' if signed_in %>
 					</td>
 				</tr>
 			</table>

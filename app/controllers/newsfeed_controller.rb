@@ -5,6 +5,7 @@ class NewsfeedController < ApplicationController
 			current_user.followed_users.each do |user|
 				@all_posts.push(*user.posts)
 			end
+			# sort the posts by rating
 			render 'newsfeed'
 		else
 			# user is not signed in
