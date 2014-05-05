@@ -20,10 +20,10 @@
 						<%= pluralize(@posts.count, "Post") %>
 					</td>
 					<td>
-						0 Following
+						<%= @user.followed_users.count %> Following
 					</td>
 					<td>
-						0 Followers
+						<%= pluralize(@user.followers.count, "Follower") %>
 					</td>
 					<td>
 						Follow
