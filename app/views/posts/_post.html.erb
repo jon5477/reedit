@@ -1,11 +1,9 @@
-<table border="1">
-	<tr>
-	<td colspan="4"><%= post.content %></td>
-	</tr>
-	<tr>
-	<td align="center"><%= image_tag("thumb_up.png", :alt => "^") %></td>
-	<td align="center"><%= post.rating %></td>
-	<td align="center"><%= image_tag("thumb_down.png", :alt => "v") %></td>
-	<td>Posted <%= post.created_at %></td>
-	</tr>
-</table>
+<tr>
+<td colspan="4"><%= post.content %></td>
+</tr>
+<tr>
+<td align="center"><%= image_tag("thumb_up.png", :alt => "^") %></td>
+<td align="center"><%= post.rating %></td>
+<td align="center"><%= image_tag("thumb_down.png", :alt => "v") %></td>
+<td>Posted <%= post.created_at %></td>
+</tr>
