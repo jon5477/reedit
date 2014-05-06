@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20140505171407) do
     t.string   "content"
     t.integer  "rating"
     t.integer  "user_id"
+    t.string   "user_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

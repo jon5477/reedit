@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :content
       t.integer :rating
       t.integer :user_id
+      t.string :user_name
       t.timestamp :created_at
 
       t.timestamps
