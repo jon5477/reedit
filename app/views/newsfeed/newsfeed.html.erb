@@ -1,7 +1,7 @@
 <% provide(:title, "Reedit") %>
 <table border="1">
 <% if @all_posts.any? %>
-	<%= @all_posts.each do |post| %>
+	<% @all_posts.each do |post| %>
 		<%= render post %>
 	<% end %>
 <% else %>
