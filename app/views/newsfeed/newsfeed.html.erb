@@ -1,4 +1,5 @@
 <% provide(:title, "Reedit") %>
+<table border="1">
 <% if @all_posts.any? %>
 	<%= @all_posts.each do |post| %>
 		<%= render post %>
@@ -6,3 +7,4 @@
 <% else %>
 	<p>Your newsfeed is empty, start following some users!</p>
 <% end %>
+</table>
